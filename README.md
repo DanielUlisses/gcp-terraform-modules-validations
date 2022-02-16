@@ -38,7 +38,14 @@ gcloud services enable cloudresourcemanager.googleapis.com
 gcloud services enable container.googleapis.com
 gcloud services enable servicenetworking.googleapis.com
 ```
-
+# required service account
+```bash
+gcloud iam service-accounts create dasilva-gke
+gcloud projects add-iam-policy-binding $PROJECT_ID --member serviceAccount:dasilva-gke@$PROJECT_ID.iam.gserviceaccount.com --role roles/compute.admin
+gcloud projects add-iam-policy-binding $PROJECT_ID --member serviceAccount:dasilva-gke@$PROJECT_ID.iam.gserviceaccount.com --role roles/iam.serviceAccountUser
+gcloud projects add-iam-policy-binding $PROJECT_ID --member serviceAccount:dasilva-gke@$PROJECT_ID.iam.gserviceaccount.com --role roles/resourcemanager.projectIamAdmin
+gcloud projects add-iam-policy-binding $PROJECT_ID --member serviceAccount:dasilva-gke@$PROJECT_ID.iam.gserviceaccount.com --role roles/container.admin
+```
 
 
 

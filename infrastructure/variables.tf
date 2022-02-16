@@ -2,10 +2,6 @@ variable "project_id" {
   type = string
 }
 
-variable "project_number" {
-  type = string
-}
-
 variable "region" {
   type = string
 }
@@ -40,4 +36,8 @@ variable "initial_node_count" {
 
 variable "tags" {
   type = map(list(string))
+}
+
+variable "service_account" {
+  type = string
 }
