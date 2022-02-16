@@ -6,7 +6,7 @@ This is the repo for the [Managing infrastructure as code with Terraform, Cloud 
 Create the state buckets
 ```bash
 PROJECT_ID=$(gcloud config get-value project)
-gsutil mb gs://${PROJECT_ID}-tfstate
+gsutil mb gs:/$PROJECT_ID-tfstate
 ```
 Update the projectID value on the terraform.tfvars and backend.tf files
 ```bash
@@ -23,11 +23,16 @@ git push origin dev
 # Configuring cloud Build
 Retrieves cloud build service account and grant it roles/editor rights
 ```bash
+gcloud services enable cloudbuild.googleapis.com
 CLOUDBUILD_SA="$(gcloud projects describe $PROJECT_ID \
     --format 'value(projectNumber)')@cloudbuild.gserviceaccount.com"
 gcloud projects add-iam-policy-binding $PROJECT_ID \
     --member serviceAccount:$CLOUDBUILD_SA --role roles/editor
 ```
+
+
+
+
 
 ## Configuring your **dev** environment
 

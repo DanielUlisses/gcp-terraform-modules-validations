@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "pythian-tf-test-tfstate"
+    bucket = "PROJECT_ID-tfstate"
     prefix = "env/prod"
   }
 }
