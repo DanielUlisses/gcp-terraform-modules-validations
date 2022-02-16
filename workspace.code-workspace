@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../solutions-terraform-cloudbuild-gitops"
+		},
+		{
+			"path": "../solutions-terraform-jenkins-gitops"
+		}
+	],
+	"settings": {}
+}

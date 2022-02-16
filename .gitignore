@@ -1,0 +1,19 @@
+.kitchen/
+credentials.json
+**/ssh/key
+*.pyc
+.idea
+.vscode
+**/*.out
+setup.txt
+
+# Local .terraform directories
+**/.terraform/*
+.terraform.lock.hcl
+
+# .tfstate files
+**/*.tfstate
+**/*.tfstate.*
+
+#mac
+.DS_Store
