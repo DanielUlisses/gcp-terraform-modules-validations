@@ -54,7 +54,7 @@ module "stackdriver_alerts" {
 }
 
 module "notification_channels" {
-  source = "./../modules/tf_mod_gcp_monitoring/modules/notification_channels"
+  source = "../../modules/tf_mod_gcp_monitoring/modules/notification_channels"
 
   resource_label = "gke"
 
