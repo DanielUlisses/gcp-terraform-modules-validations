@@ -56,6 +56,7 @@ module "stackdriver_alerts" {
 module "notification_channels" {
   source = "../../modules/tf_mod_gcp_monitoring/modules/notification_channels"
 
+  project_id     = var.project_id
   resource_label = "gke"
 
   notification_email_addresses = ["dsilva@pythian.com"]
