@@ -1,7 +1,8 @@
 
-project_id = "dasilva-sandbox"
-region     = "us-central1"
-zones      = ["us-central1-a", "us-central1-b", "us-central1-f"]
+project_id     = "dasilva-sandbox"
+region         = "us-central1"
+zones          = ["us-central1-a", "us-central1-b", "us-central1-f"]
+project_number = "1034216200879"
 tags = {
   "team"    = ["team75"]
   "owner"   = ["dsilva"]
