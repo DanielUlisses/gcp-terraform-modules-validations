@@ -7,6 +7,7 @@ Create the state buckets
 ```bash
 PROJECT_ID=$(gcloud config get-value project)
 gsutil mb gs://$PROJECT_ID-tfstate
+gsutil versioning set on gs://$PROJECT_ID-tfstate/
 ```
 Update the projectID value on the terraform.tfvars and backend.tf files
 ```bash
@@ -30,6 +31,13 @@ gcloud projects add-iam-policy-binding $PROJECT_ID \
     --member serviceAccount:$CLOUDBUILD_SA --role roles/editor
 ```
 
+# required API's
+```bash
+gcloud services enable compute.googleapis.com
+gcloud services enable cloudresourcemanager.googleapis.com
+gcloud services enable container.googleapis.com
+gcloud services enable servicenetworking.googleapis.com
+```
 
 
 
