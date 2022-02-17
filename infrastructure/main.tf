@@ -39,6 +39,9 @@ module "gke" {
   http_load_balancing        = false
   horizontal_pod_autoscaling = true
   network_policy             = true
+  logging_service            = "logging.googleapis.com/kubernetes"
+  monitoring_service         = "monitoring.googleapis.com/kubernetes"
+
 
   node_pools = [
     {
