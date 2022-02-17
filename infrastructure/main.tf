@@ -30,7 +30,7 @@ module "gke" {
   source                     = "terraform-google-modules/kubernetes-engine/google"
   project_id                 = var.project_id
   name                       = local.gke_name
-  region                     = var.region
+  regional                   = false
   zones                      = var.zones
   network                    = "default"
   subnetwork                 = "default"
